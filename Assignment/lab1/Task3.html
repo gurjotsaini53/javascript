@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn1">Generate Random Number</button>
+    <div id="res"></div>
+
+    <script>
+      let btn1 = document.querySelector("#btn1");
+      let res = document.querySelector("#res");
+
+      btn1.addEventListener("click", function () {
+        let RandomNumber = Math.random() * 10 + 1;
+        res.innerHTML = RandomNumber;
+      });
+    </script>
+  </body>
+</html>

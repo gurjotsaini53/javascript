@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    min : <input type="text" name="" id="min" /><br />
+    max : <input type="text" name="" id="max" /><br />
+    <br />
+    <button id="btn1">Generate Random Number</button>
+    <div id="res"></div>
+
+    <script>
+      let btn1 = document.querySelector("#btn1");
+      let res = document.querySelector("#res");
+
+      function RandomNumberRange(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      btn1.addEventListener("click", function () {
+        let minV = parseInt(document.getElementById("min").value);
+        let maxV = parseInt(document.getElementById("max").value);
+
+        let RandomNumber = RandomNumberRange(minV, maxV);
+        console.log(RandomNumber);
+        res.innerHTML = RandomNumber;
+      });
+    </script>
+  </body>
+</html>

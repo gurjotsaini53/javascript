@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="inp" />
+    <button id="add">Add</button>
+    <button id="display">Display</button>
+    <div id="result"></div>
+    <script>
+      let input = document.querySelector("#inp");
+      let add = document.querySelector("#add");
+      let display = document.querySelector("#display");
+      let arr = [];
+
+      add.addEventListener("click", function () {
+        let value = input.value;
+        arr.push(value);
+        input.value = "";
+
+        window.alert("Added Successfull");
+      });
+
+      display.addEventListener("click", function () {
+        result.innerHTML = "";
+        for (let i = 0; i < arr.length; i++) {
+          result.append(`Element ${i} = ${arr[i]}`);
+          let space = document.createElement("br");
+          result.append(space);
+        }
+      });
+    </script>
+  </body>
+</html>
